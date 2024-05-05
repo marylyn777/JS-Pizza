@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Pizza</title>
+
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- LESS основний файл -->
+    <link rel="stylesheet/less" type="text/css" href="assets/less/main.less" />
+    <!-- LESS JavaScript компілятор -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+    <div class="main-left">
+        <header>
+            <div class="header-left">
+                <h3>PIZZA</h3>
+                <h2>KMA</h2>
+                <div class="header-left-decor">
+                    <svg width="135px" height="35px" viewBox="0 0 100 11" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                        <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+                        <title>Rectangle 76</title>
+                        <desc>Created with Sketch.</desc>
+                        <defs></defs>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                            sketch:type="MSPage">
+                            <path d="M51,9 L0,0 L0,192 L50,182.619488 L100,192 L100,0 L51,9 Z" id="Rectangle-76"
+                                stroke="#D16200" fill="#EA862E" sketch:type="MSShapeGroup"></path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="header-right-top">
+                    <div class="hedear-left-inside">
+                        <h2>(044) 222 5 222</h2>
+                        <h4 class="hidden1020">24 години/ 7 днів на тиждень</h4>
+                        <h3 class="hidden1400">Безкоштовна доставка піци</h3>
+
+                    </div>
+                    <div class="hedear-right-inside">
+                        <button class="exit" id="exit">Ввійти</button>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="header-right-bottom">
+                    <h2>Піца</h2>
+                </div>
+            </div>
+        </header>
+        <main class="choice">
+            <div class="pizzaChoice">
+                <span id="pizzaChoiceName"> <span id="nameSort">Усі</span> піци</span>
+                <span id="amountOfChoicePizza">8</span>
+            </div>
+            <div class="differentPizzas" id="differentPizzas">
+                <button value="" class="active">Усі</button>
+                <button value="М’ясна піца">М'ясні</button>
+                <button value="pineapple" slot="key">З ананасами</button>
+                <button value="mushroom" slot="key">З грибами</button>
+                <button value="Морська піца">З морепродуктами</button>
+                <button value="Вега піца">Вега</button>
+            </div>
+
+            <div class="pizzas" id="pizzas">
+                <!-- <div class="pizza-g">
+                    <img class="pizza-g-img" src="./assets/images/pizza_1.jpg" alt="">
+                    <div class="pizza-c">
+                        <h2>Imperia</h2>
+                        <p class="categori">Meat , asas</p>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam exercitationem natus consequuntur dolores tempora ex repellat expedita quod pariatur ipsum quam, </p>
+                        <div class="pizza-size-g">
+                            <div class="pizza-size-c">
+                                <div class="pizza-size-d">
+                                    <img src="./assets/images/size-icon.svg" alt="">
+                                    <span>30</span>
+                                </div>
+                                <div class="pizza-size-d">
+                                    <img src="./assets/images/weight.svg" alt="">
+                                    <span>370</span>
+                                </div>
+                                <h2 class="pizza-size-price">
+                                    99
+                                </h2>
+                                <p class="pizza-size-value">grn</p>
+                                <button class="pizza-size-buy">kypit</button>
+                            </div>
+                            <div class="pizza-size-c">
+                                <div class="pizza-size-d">
+                                    <img src="./assets/images/size-icon.svg" alt="">
+                                    <span>30</span>
+                                </div>
+                                <div class="pizza-size-d">
+                                    <img src="./assets/images/weight.svg" alt="">
+                                    <span>370</span>
+                                </div>
+                                <h2 class="pizza-size-price">
+                                    99
+                                </h2>
+                                <p class="pizza-size-value">grn</p>
+                                <button class="pizza-size-buy">kypit</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> -->
+            </div>
+
+        </main>
+    </div>
+
+    <div class="main-right-basket">
+        <div class="top-basket">
+            <div class="top-basket-left">
+                <h2>Замовлення</h2>
+                <span id="countGoogs">3</span>
+            </div>
+            <div class="top-basket-right">
+                <p class="" id="removeAllBasket">Очистити замовлення</p>
+            </div>
+        </div>
+        <!-- //! PROBLEM -->
+
+        <div class="goods-basket" id="goodsBasket">
+
+            <div class="good-basket-g">
+                <div class="good-basket-g-left">
+                    <h2>BBQ (Smail)</h2>
+                    <div class="good-basket-c-date">
+                        <div class="pizza-size-d">
+                            <img src="./assets/images/size-icon.svg" alt="">
+                            <span>30</span>
+                        </div>
+                        <div class="pizza-size-d">
+                            <img src="./assets/images/weight.svg" alt="">
+                            <span>370</span>
+                        </div>
+                    </div>
+                    <div class="good-basket-g-c">
+                        <p class="good-basket-price">333 ua</p>
+                        <button class="good-basket-minus">-</button>
+                        <span class="good-basket-amount">4</span>
+                        <button class="good-basket-plus">+</button>
+                        <button class="good-basket-close">X</button>
+                    </div>
+                </div>
+                <div class="good-basket-g-right">
+                    <img src="./assets/images/pizza_2.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="basket-good">
+                <h2 class="nameInBasket">BBQ</h2>
+            </div>
+        </div>
+        <div class="bottom-basket">
+            <div class="text-sum">
+                <h3>Сума замовлення</h3>
+                <h2 id="sum"><span id="all_sum">924</span> грн</h2>
+            </div>
+            <button id="buy">Замовити</button>
+        </div>
+        </div>
+
+
+        <div class="discount-bonus">
+            <div class="discount-decor">
+                <svg width="135px" height="35px" viewBox="0 0 100 11" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+                    <title>Rectangle 76</title>
+                    <desc>Created with Sketch.</desc>
+                    <defs></defs>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                        <path d="M51,9 L0,0 L0,192 L50,182.619488 L100,192 L100,0 L51,9 Z" id="Rectangle-76"
+                            stroke="#D16200" fill="#EA862E" sketch:type="MSShapeGroup"></path>
+                    </g>
+                </svg>
+            </div>
+            <h3>ЦЬОГО</h3>
+            <h3>ТИЖНЯ</h3>
+            <h3>НА ВСЕ</h3>
+            <p>-20%</p>
+        </div>
+
+        <!-- <div id="cart"></div> -->
+        <!-- <div class="container">
+    <div class="row" id="pizza_list">
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_1.jpg">
+
+                <div class="caption"><h3>Thumbnail label</h3>
+
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                    <p>
+                        <a href="#" class="btn btn-primary">Button 2</a>
+                        <a href="#" class="btn btn-default">Button 1</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_2.jpg">
+
+                <div class="caption"><h3>Thumbnail label</h3>
+
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                    <p>
+                        <a href="#" class="btn btn-primary">Button 3</a>
+                        <a href="#" class="btn btn-default">Button 4</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_3.jpg">
+
+                <div class="caption"><h3>Thumbnail label</h3>
+
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                    <p>
+                        <a href="#" class="btn btn-primary">Button 5</a>
+                        <a href="#" class="btn btn-default">Button 6</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+        <!-- jQuery JavaScript -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
+
+        <!--Bootsrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <!--Own JavaScript -->
+        <script type="text/javascript" src="assets/js/index.js"> </script>
+        <!-- <script type="text/javascript"  src="assets/js/main.js"> </script> -->
+</body>
+
+</html>

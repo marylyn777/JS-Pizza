@@ -1,0 +1,572 @@
+@mainColor: blue;
+
+@import "pizza/pizza-card";
+@import "./variables.less";
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+}
+
+body {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+
+  * {
+    margin: 0;
+  }
+}
+
+.main-left {
+  height: 100vh;
+  width: ~"calc(100% - 400px)";
+  // width: 100%;
+  background-color: #FFFEF8;
+
+  header {
+    position: fixed;
+    width: ~"calc(100% - 400px)";
+    padding: 0 25px 0 10px;
+    height: @size-header-h;
+    .beetween();
+    gap: 20px;
+    background-color: #333331d0;
+    z-index: 200;
+
+    .header-left {
+      background-color: #ED851A;
+      height: @size-header-h;
+      min-width: @size-header-h - 15px;
+      position: relative;
+      .columnCenter();
+      gap: 10px;
+      z-index: 10;
+
+      h3 {
+        font-size: 25px;
+        color: white;
+      }
+
+      h2 {
+        font-size: 35px;
+        color: white;
+        margin: 0;
+      }
+
+      .header-left-decor {
+        position: absolute;
+        bottom: -30px;
+        transform: rotate(180deg);
+      }
+
+
+    }
+
+    .header-right {
+      width: 100%;
+      height: 100%;
+      .columnBeetween();
+      color: white;
+
+      .header-right-top {
+        .beetween();
+        width: 100%;
+        height: 100%;
+
+        .hedear-left-inside {
+          .center();
+          gap: 40px;
+
+          * {
+            color: #A1A19E;
+            margin: 0;
+          }
+        }
+
+        //! I DONT UNDERSTAND
+      }
+
+
+      .header-right-bottom {
+        display: flex;
+        width: 100%;
+
+        h2 {
+          margin: 16px 0;
+        }
+      }
+
+    }
+  }
+
+  .choice {
+    padding-top: @size-header-h + 25px;
+    .columnCenter();
+    // justify-content: flex-start;
+    gap: 15px;
+    // height:  ~"calc(100vh - 175px)";
+    height: 100vh;
+    overflow-y: auto;
+
+    .pizzaChoice {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      #pizzaChoiceName {
+        color: #333335;
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      #amountOfChoicePizza {
+        font-size: 17px;
+        background-color: #EA8B04;
+        color: white;
+        width: 30px;
+        height: 30px;
+        .center();
+        border-radius: 100%;
+      }
+    }
+
+    .differentPizzas {
+      color: #EA8B04;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding-bottom: 40px;
+      font-size: 20px;
+      transition: all .4s;
+
+      .active {
+        background-color: #EA8B04;
+        padding: 10px;
+        color: white !important;
+        border-radius: 7px;
+      }
+
+    }
+
+    .pizzas {
+      .beetween();
+      flex-wrap: wrap;
+      height: 600px;
+      // height: 100%;
+      padding-left: 12%;
+      padding-right: 12%;
+      gap: 40px;
+
+      width: 100%;
+
+      .pizza-g {
+        background-color: white;
+        border-radius: 12px;
+        border: 1px solid grey;
+        width: 320px;
+        height: 580px;
+        display: flex;
+        flex-direction: column;
+        // overflow: hidden;
+        position: relative;
+        .pizza-popular {
+          color: white;
+          text-align: center;
+          justify-content: center;
+          position: absolute;
+          background-color: green;
+          border-radius: 9px;
+          width: 80px;
+          height: 40px;
+          padding: 5px;
+          top: 0;
+          right: 0;
+          transform: translate(30%,-50%);
+          // z-index: 201;
+        }
+        .pizza-new {
+          color: white;
+          text-align: center;
+          justify-content: center;
+          position: absolute;
+          background-color: red;
+          border-radius: 9px;
+          width: 80px;
+          height: 40px;
+          padding: 5px;
+          top: 0;
+          right: 0;
+          transform: translate(30%,-50%);
+
+        }
+
+        .pizza-g-img {
+          width: 250px;
+          height: 250px;
+          align-self: center;
+          object-fit: cover;
+        }
+
+        .pizza-c {
+
+          padding-left: 8%;
+          padding-right: 8%;
+
+          h2 {
+            font-weight: bold;
+            color: #EA8B04;
+          }
+
+          .categori {
+            font-size: 12px;
+            color: #85858a
+          }
+
+          .pizza-size-g {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+
+          .pizza-size-c {
+            display: flex !important;
+            flex-direction: column;
+            justify-content: center !important;
+            align-items: center;
+
+          }
+
+          .pizza-size-d {
+            align-items: center !important;
+          }
+
+          .pizza-size-price {
+            padding-top: 15px;
+            font-size: 35px;
+            font-weight: bold;
+          }
+
+          .pizza-size-value {
+            font-size: 20px;
+            padding-bottom: 10px;
+          }
+
+          .pizza-size-buy {
+            width: 100%;
+            background-color: #cece51;
+      // font: 60px sans-serif;
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#efb55d+44,ed9402+100 */
+      background: #efb55d;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #efb55d 44%, #ed9402 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #efb55d 44%, #ed9402 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #efb55d 44%, #ed9402 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efb55d', endColorstr='#ed9402', GradientType=0);
+      /* IE6-9 */
+            border: 1px solid #ca770a;
+            color: white;
+            border-radius: 12px;
+            padding: 10px;
+            font-size: 25px;
+          }
+        }
+
+      }
+
+
+    }
+  }
+
+  .hedear-right-inside {
+    .exit {
+      width: 100px;
+      height: 60px;
+      border: 1px solid #ca770a;
+      border-radius: 15px;
+      font-size: 20px;
+      background-color: #cece51;
+      // font: 60px sans-serif;
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#efb55d+44,ed9402+100 */
+      background: #efb55d;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #efb55d 44%, #ed9402 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #efb55d 44%, #ed9402 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #efb55d 44%, #ed9402 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efb55d', endColorstr='#ed9402', GradientType=0);
+      /* IE6-9 */
+
+    }
+  }
+}
+
+
+
+
+
+// right
+
+.main-right-basket {
+  height: 100vh;
+  min-width: @size-right;
+  // width: @size-right;
+  max-width: @size-right;
+  width: 100vw;
+  background-color: white;
+
+  .top-basket {
+    height: @size-header-h;
+    background-color: white;
+    .beetween();
+
+    .top-basket-left {
+      h2 {
+        font-size: 25px;
+        font-weight: bold;
+      }
+
+      padding-top: 30px;
+      padding-left: 20px;
+      gap: 7px;
+      .center();
+
+      span {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        .center();
+        background-color: #F08905;
+        color: white;
+        font-size: large;
+
+      }
+    }
+
+    .top-basket-right {
+      color: #C6C4C5;
+      padding-top: 30px;
+      padding-right: 20px;
+    }
+  }
+
+  .goods-basket {
+    background-color: #F6F4F5;
+    box-shadow: -5px 0 8px rgba(0, 0, 0, 0.268);
+    height: ~"calc(100% - 340px)";
+    overflow-y: auto;
+    //!WTFFFFFFF
+    .basket-good {
+      color: #000;
+    }
+  
+  }
+
+  .bottom-basket {
+    // .beetween();
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    background-color: white;
+    box-shadow: -5px 0 8px rgba(0, 0, 0, 0.268);
+    height: @size-header-h + 40px;
+
+    .text-sum {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+
+      h3 {
+        padding-left: 20px;
+        font-weight: bold;
+      }
+
+      h2 {
+        padding-right: 20px;
+        font-weight: bold;
+      }
+    }
+
+    #buy {
+      background-color: #cece51;
+      // font: 60px sans-serif;
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#efb55d+44,ed9402+100 */
+      background: #efb55d;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #efb55d 44%, #ed9402 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #efb55d 44%, #ed9402 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #efb55d 44%, #ed9402 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efb55d', endColorstr='#ed9402', GradientType=0);
+      /* IE6-9 */
+      color: white;
+      border: 1px solid #ca770a;
+      border-radius: 15px;
+      font: 25px sans-serif;
+      height: 70px;
+      width: 320px;
+      margin: auto !important;
+    }
+  }
+}
+
+
+// discount
+.discount-bonus {
+  position: fixed;
+  bottom: 0;
+  left: 10px;
+  background-color: #ED851A;
+  width: @size-header-h - 15px;
+  padding: 20px 0;
+  .columnCenter();
+
+  .discount-decor {
+    position: absolute;
+    top: -30px;
+  }
+
+  color: white;
+
+  p {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+
+}
+
+
+.good-basket-g {
+ .beetween();
+ border-bottom: 1px solid rgb(186, 185, 185);
+ gap: 30px;
+ height: 160px;
+}
+.good-basket-g-left {
+  padding-left: 25px;
+  h2 {
+    margin-top: 5px;
+    color:#ed9402
+  }
+}
+.good-basket-c-date {
+  padding-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.good-basket-g-c {
+  align-items: center;
+  padding-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+.good-basket-price {
+  font-weight: bold;
+ 
+}
+.good-basket-minus {
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 100%;
+  border: 1px solid rgb(200, 13, 13);
+}
+.good-basket-amount {
+  font-weight: bold;
+}
+.good-basket-plus {
+  text-align: center;
+  color: white;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  background-color: rgb(6, 155, 6);
+  border-radius: 100%;
+  border: 1px solid green;
+}
+.good-basket-close {
+  text-align: center;
+  font-weight: bold;
+  color: #F08905;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(233, 227, 227);
+  border-radius: 100%;
+  border: 1px solid rgb(186, 185, 185);
+
+}
+.good-basket-g-right {
+  img {
+    height: 130px;
+    width: 130px;
+    transform: translateX(65px);
+  }
+}
+
+
+@media screen and (max-width : 1550px) {
+  .hidden1400 {
+    display: none;
+  }
+}
+@media screen and (max-width : 1300px) {
+  body {
+    .main-left{
+
+      .choice {
+        justify-content: flex-start;
+        .pizzas {
+          .columnCenter() ;
+          height: 600px;
+          height: auto;
+          padding: 0;
+          gap: 40px;
+          flex-wrap: nowrap;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width : 1020px) {
+  .hidden1020 {
+    display: none;
+  }
+}
+@media screen and (max-width : 912px) {
+
+  .line {
+    transform: translateY(-35px);
+  }
+    #exit {
+      // margin: 12px 0 !important;
+      transform: translateY(58px);
+    }
+    .header-right-bottom {
+       h2  {
+         display: none !important;
+
+       }
+       padding-bottom: 32px;
+    }
+  
+}
